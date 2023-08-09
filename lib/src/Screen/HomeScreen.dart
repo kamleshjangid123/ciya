@@ -1,4 +1,5 @@
 import 'package:ciya/src/components/HeaderHomeComponent.dart';
+import 'package:ciya/src/components/ImageSliderState.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,7 +26,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: w,
                 height: h*.1,
                 color: Colors.amber,
-                child: HeaderHomeComponent(),)
+                child: HeaderHomeComponent(),),
+
+                 Container(
+                width: w,
+                height: h*.3,margin: EdgeInsets.only(top: 5),
+              
+                child: ImageSliderState(),)
             ],
           ),
         )),
