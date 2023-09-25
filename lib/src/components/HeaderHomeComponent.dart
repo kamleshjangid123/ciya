@@ -14,13 +14,24 @@ class _HeaderHomeComponentState extends State<HeaderHomeComponent> {
     var h = MediaQuery.of(context).size.height;
     return Scaffold(body: Container(
 
-        child: Row(children: [
-          Column(children: [
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          
+          children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
             Container(
-              width: w,
+              width: w*.1,
               height: h*.1,
-            color: const Color.fromARGB(255, 255, 7, 7),
               child: Icon(Icons.home,size: 40,color: Colors.amber,),
+            )
+          ],),
+           Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Container(
+              width: w*.6,
+              child: Text("Home",style: TextStyle(fontSize: 20),),
             )
           ],)
         ],),
