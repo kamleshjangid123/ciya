@@ -1,5 +1,5 @@
-import 'package:ciya/src/Screen/Orderplace.dart';
-import 'package:ciya/src/components/Cart_Buy.dart';
+import 'package:ciya/src/Screen/Exta/Orderplace.dart';
+import 'package:ciya/src/Screen/Exta/Cart_Buy.dart';
 import 'package:ciya/src/components/Footer.dart';
 import 'package:flutter/material.dart';
 
@@ -128,11 +128,86 @@ class _ExploreState extends State<Explore> {
             ),
 
                 Container(
-              height: h*.25,
+              height: h*.07,
               width: w,
               margin: EdgeInsets.all(5),
-              color: const Color.fromARGB(255, 204, 181, 243),
+              color: Color.fromARGB(255, 255, 255, 255),
               child: Text("Recent"),
+            ),
+            Container(
+              height: h*.22,
+              width: w,
+              color:Color.fromARGB(255, 255, 255, 255) ,
+              child:
+              SingleChildScrollView(scrollDirection: Axis.horizontal,
+              child:
+               Row(
+                children: [Container(
+                height: h*.2,
+                margin: EdgeInsets.only(left: 5),
+                width: w*.3,
+                child:
+                TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart_Buy())), 
+                    child:Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                   Image.asset('assets/images/p_IndianTandooriPaneer.jpg'),
+                   Text("Tandoori Paneer Pizza",textAlign: TextAlign.center,)
+                ],),)
+              ),
+              Container(
+                height: h*.2,
+                margin: EdgeInsets.only(left: 5),
+                width: w*.3,
+                child:
+               TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart_Buy())), 
+                    child:
+                 Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                   Image.asset('assets/images/burger1.png'),
+                   Text("Burger",textAlign: TextAlign.center,)
+                ],),)
+              ),
+              
+              
+
+               Container(
+                height: h*.2,
+                margin: EdgeInsets.only(left: 5),
+                width: w*.3,
+                child:
+               TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart_Buy())), 
+                    child:
+                 Column(mainAxisAlignment: MainAxisAlignment.spaceAround,children: [
+                   Image.asset('assets/images/p_Farmhouse.jpg'),
+                   Text("Farmhouse Pizza",textAlign: TextAlign.center,)
+                ],),)
+              ),
+
+               Container(
+                height: h*.2,
+                margin: EdgeInsets.only(left: 5),
+                width: w*.3,
+                child:
+               TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart_Buy())), 
+                    child:
+                 Column(mainAxisAlignment: MainAxisAlignment.spaceAround,children: [
+                   Image.asset('assets/images/pasta.png'),
+                   Text("Masala Pasta",textAlign: TextAlign.center,)
+                ],),)
+              ),
+               Container(
+                height: h*.2,
+                margin: EdgeInsets.only(left: 5),
+                width: w*.3,
+                child:
+               TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart_Buy())), 
+                    child:
+                 Column(mainAxisAlignment: MainAxisAlignment.spaceAround,children: [
+                   Image.asset('assets/images/drink5.png',height: h*.15,),
+                   Text("Cocktail",textAlign: TextAlign.center,)
+                ],),)
+              ),
+              ],),)
             ),
 
             Container(

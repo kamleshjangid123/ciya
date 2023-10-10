@@ -62,7 +62,7 @@ var h =MediaQuery.of(context).size.height;
                 margin: EdgeInsets.all(5),
                
                 child: Column(children: [
-                   TextButton(onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>Pizza1(food[i],comment[i]))), 
+                   TextButton(onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>Pizza1(food[i],comment[i],png[i]))), 
                     child:
                    Text('${food[i]}',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight: FontWeight.w600,fontSize: 25),)),
                    Text('${comment[i]}',style: TextStyle(color:Color.fromARGB(255, 224, 227, 59),fontSize: 15),textAlign: TextAlign.center,),

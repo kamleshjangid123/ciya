@@ -1,4 +1,5 @@
-import 'package:ciya/src/Screen/Payment.dart';
+import 'package:ciya/src/Screen/Exta/Payment.dart';
+import 'package:ciya/src/components/Upi.dart';
 import 'package:flutter/material.dart';
 
 class Address extends StatefulWidget {
@@ -14,8 +15,10 @@ class _AddressState extends State<Address> {
      var w = MediaQuery.of(context).size.width;
      var h = MediaQuery.of(context).size.height;
     return Scaffold(body: 
-    SafeArea(child: 
-    Column(children: [
+    SafeArea(child: SingleChildScrollView(
+      child:
+    Column(
+      children: [
       
       Container(
         
@@ -29,7 +32,7 @@ class _AddressState extends State<Address> {
         child: Text("Address",style: TextStyle(fontSize: 25),),),
         
           Container(
-            height: h,
+            
             width: w,
             child: Column(children: [
               Container(
@@ -83,10 +86,13 @@ class _AddressState extends State<Address> {
               Container(
                 height: h*.08,
                 width: w*.6,
-                child: Column(children: [
-                  Text("UPI",style: TextStyle(fontSize: 25),),
-                  Image.asset('assets/images/allpay.png',height: 20,width: 40,)
-                ]),
+                child:
+                TextButton(onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>Upi())), 
+                child:
+                 Column(children: [
+                  Text("UPI",style: TextStyle(fontSize: 23,color: Colors.black),),
+                  Image.asset('assets/images/allpay.png',height: 18,width: 40,)
+                ]),)
                        
               )
             ],),
@@ -110,6 +116,7 @@ class _AddressState extends State<Address> {
                 child: Column(children: [
                   Text("Cash",style: TextStyle(fontSize: 25),),
                   Text("Cash On Delivery",style: TextStyle(color: Colors.grey),)
+                 
                 ]),
                        
               )
@@ -122,7 +129,9 @@ class _AddressState extends State<Address> {
         width: w,
         margin: EdgeInsets.all(3),
         decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(15)),color: Colors.black),
-        child: Text("Payment Now",style: TextStyle(color: Colors.white,fontSize: 35),textAlign: TextAlign.center,),
+        child:
+        
+        Center(child: Text("Payment Now",style: TextStyle(color: Colors.white,fontSize: 35),textAlign: TextAlign.center,),),
       ),
 
                     
@@ -132,6 +141,7 @@ class _AddressState extends State<Address> {
             ],),
           )
     ],)
+    )
     ));
   }
 }

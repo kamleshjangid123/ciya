@@ -75,7 +75,7 @@ print("not login");
                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(15)),color: Colors.white),
                           child: TextField(  controller: password, decoration: InputDecoration(border: OutlineInputBorder(borderRadius:BorderRadius.all(Radius.circular(15))),hintText: "Password",),),
                         ),
-                        ElevatedButton(onPressed: ()=>loginfun(),
+                        TextButton(onPressed: ()=>loginfun(),
                         child:
                         Container(
                           height: h*.06,

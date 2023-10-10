@@ -1,4 +1,4 @@
-import 'package:ciya/src/components/Cart_Buy.dart';
+import 'package:ciya/src/Screen/Exta/Cart_Buy.dart';
 import 'package:flutter/material.dart';
 
 class Pasta extends StatefulWidget {

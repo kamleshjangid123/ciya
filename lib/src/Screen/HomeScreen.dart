@@ -1,5 +1,4 @@
 import 'package:ciya/src/Screen/Homescreen2.dart';
-import 'package:ciya/src/components/Cart_Buy.dart';
 import 'package:ciya/src/components/Drink.dart';
 import 'package:ciya/src/components/Footer.dart';
 import 'package:ciya/src/components/Product.dart';
@@ -21,14 +20,46 @@ class _HomeScreenState extends State<HomeScreen> {
 
     var w = MediaQuery.of(context).size.width;
     var h = MediaQuery.of(context).size.height;
-    return Scaffold(
-    /*  floatingActionButton: FloatingActionButton(
-        
-        backgroundColor: Color.fromARGB(255, 98, 185, 232),
-        child: Icon(Icons.cast),
-        onPressed: () => Cart_Buy() ,
-      ),*/
-      body: 
+    return Scaffold(appBar: AppBar(title: Text("Home",style: TextStyle(fontSize: 20),)),
+    drawer: Drawer(
+      width: w*.6,
+      child: Column(children: [
+        DrawerHeader(child: Image.asset('assets/images/profile.png')),
+        Text('Kamlesh Jangid',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+        Container(
+          child: Column(children: [
+            Container(
+              margin: EdgeInsets.only(left: 5,bottom: 5),
+              height: h*.06,
+              child: Row(children: [
+                Icon(Icons.settings,size: 25,),
+                SizedBox(width: 8,),
+                Text('Setting',style: TextStyle(fontSize: 20),)
+              ],),
+            ),
+             Container(
+              margin: EdgeInsets.only(left: 5,bottom: 5),
+              height: h*.06,
+              child: Row(children: [
+                Icon(Icons.contact_emergency,size: 25,),
+                SizedBox(width: 8,),
+                Text('Contect',style: TextStyle(fontSize: 20),)
+              ],),
+            ),
+             Container(
+              margin: EdgeInsets.only(left: 5,bottom: 5),
+              height: h*.06,
+              child: Row(children: [
+                Icon(Icons.change_circle,size: 25,),
+                SizedBox(width: 8,),
+                Text('Theme',style: TextStyle(fontSize: 20),)
+              ],),
+            )
+          ],),
+        )
+      ],),
+    ),
+           body: 
   SafeArea(child:       
       Container(
         width: w,
@@ -36,12 +67,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+             /* Container(
                 width: w,
                 height: h*.1,
                 color: Colors.amber,
                 child: HeaderHomeComponent(),),
-
+*/
                  Container(
                 width: w,
                 height: h*.25,margin: EdgeInsets.only(top: 5),
@@ -87,8 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             
            
-            
-  Container(width: w,
+              Container(width: w,
           height: h*.08,
           color: Color.fromARGB(255, 27, 26, 26),
           child: Footer(),
@@ -104,9 +134,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-/* floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(255, 98, 185, 232),
-        child: Icon(Icons.cast),
-        onPressed: () => print('Cast') ,
-      ),
-      */
